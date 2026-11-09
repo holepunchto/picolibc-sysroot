@@ -1,6 +1,6 @@
 {
   "name": "picolibc-sysroot-thumbv8m.main-none-eabihf",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "The picolibc sysroot for thumbv8m.main-none-eabihf",
   "exports": {
     ".": "./index.js",
