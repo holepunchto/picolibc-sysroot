@@ -1,6 +1,6 @@
 {
   "name": "picolibc-sysroot",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Prebuilt picolibc sysroots for the llvm-runtime compiler",
   "exports": {
     ".": "./index.js",
