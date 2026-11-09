@@ -1,0 +1,42 @@
+name: Publish
+on:
+  push:
+    tags:
+      - v*
+permissions:
+  contents: read
+jobs:
+  prebuild:
+    runs-on: ubuntu-22.04
+    name: Build
+    steps:
+      - uses: holepunchto/actions/bare-base@v1
+        with:
+          force-install: true
+      - uses: holepunchto/actions/setup-python@v1
+      - uses: holepunchto/actions/setup-meson@v1
+      - uses: holepunchto/actions/compile-prebuilds@v1
+        with:
+          platform: linux
+          arch: x64
+          upload: true
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+    environment:
+      name: npm
+    needs: prebuild
+    name: Publish
+    steps:
+      - uses: holepunchto/actions/node-base@v1
+        with:
+          force-install: true
+      - uses: holepunchto/actions/download-prebuilds@v1
+        with:
+          prefix: npm
+      - uses: holepunchto/actions/publish@v1
+        with:
+          workspaces: true
+          include-workspace-root: true

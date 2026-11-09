@@ -1,0 +1,15 @@
+[binaries]
+c = [@c@]
+c_ld = 'lld'
+ar = '@llvm_ar@'
+nm = '@llvm_nm@'
+strip = '@llvm_strip@'
+
+[host_machine]
+system = 'none'
+cpu_family = '@cpu_family@'
+cpu = '@cpu@'
+endian = 'little'
+
+[properties]
+skip_sanity_check = true

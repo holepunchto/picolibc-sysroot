@@ -1,0 +1,26 @@
+name: Prebuild
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prebuild:
+    runs-on: ubuntu-22.04
+    name: Build
+    steps:
+      - uses: holepunchto/actions/bare-base@v1
+        with:
+          force-install: true
+      - uses: holepunchto/actions/setup-python@v1
+      - uses: holepunchto/actions/setup-meson@v1
+      - uses: holepunchto/actions/compile-prebuilds@v1
+        with:
+          platform: linux
+          arch: x64
+          upload: true
+  merge:
+    runs-on: ubuntu-latest
+    needs: prebuild
+    name: Merge
+    steps:
+      - uses: holepunchto/actions/merge-prebuilds@v1

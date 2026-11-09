@@ -1,0 +1,34 @@
+{
+  "name": "picolibc-sysroot-riscv32-unknown-none-elf",
+  "version": "0.1.0",
+  "description": "The picolibc sysroot for riscv32-unknown-none-elf",
+  "exports": {
+    ".": "./index.js",
+    "./package": "./package.json"
+  },
+  "files": [
+    "NOTICE",
+    "index.js",
+    "include",
+    "lib",
+    "share"
+  ],
+  "assets": [
+    "include",
+    "lib",
+    "share"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/picolibc-sysroot.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/picolibc-sysroot/issues"
+  },
+  "homepage": "https://github.com/holepunchto/picolibc-sysroot#readme",
+  "dependencies": {
+    "require-asset": "^1.2.3"
+  }
+}

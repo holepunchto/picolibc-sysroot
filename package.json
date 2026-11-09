@@ -1,0 +1,40 @@
+{
+  "name": "picolibc-sysroot",
+  "version": "0.0.0",
+  "description": "Prebuilt picolibc sysroots for the llvm-runtime compiler",
+  "exports": {
+    ".": "./index.js",
+    "./package": "./package.json"
+  },
+  "files": [
+    "NOTICE",
+    "index.js"
+  ],
+  "workspaces": [
+    "npm/*"
+  ],
+  "scripts": {
+    "format": "prettier --write . && lunte --fix",
+    "lint": "prettier --check . && lunte"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/picolibc-sysroot.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/picolibc-sysroot/issues"
+  },
+  "homepage": "https://github.com/holepunchto/picolibc-sysroot#readme",
+  "optionalDependencies": {
+    "picolibc-sysroot-riscv32-unknown-none-elf": "0.0.0",
+    "picolibc-sysroot-thumbv8m.main-none-eabihf": "0.0.0"
+  },
+  "devDependencies": {
+    "cmake-fetch": "^1.4.9",
+    "lunte": "^1.8.4",
+    "prettier": "^3.6.2",
+    "prettier-config-holepunch": "^2.0.0"
+  }
+}
