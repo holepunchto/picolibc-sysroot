@@ -1,6 +1,6 @@
 {
   "name": "picolibc-sysroot-riscv32-unknown-none-elf",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The picolibc sysroot for riscv32-unknown-none-elf",
   "exports": {
     ".": "./index.js",

@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/holepunchto/picolibc-sysroot#readme",
   "optionalDependencies": {
-    "picolibc-sysroot-riscv32-unknown-none-elf": "0.0.0",
-    "picolibc-sysroot-thumbv8m.main-none-eabihf": "0.0.0"
+    "picolibc-sysroot-riscv32-unknown-none-elf": "0.1.0",
+    "picolibc-sysroot-thumbv8m.main-none-eabihf": "0.1.0"
   },
   "devDependencies": {
     "cmake-fetch": "^1.4.9",
